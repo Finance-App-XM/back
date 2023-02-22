@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('guest')->group(function () {
-    Route::post('/register', RegistrationController::class);
+    Route::post('/register', RegistrationController::class)->name('register');
     Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)->name('verification.verify');
 });
