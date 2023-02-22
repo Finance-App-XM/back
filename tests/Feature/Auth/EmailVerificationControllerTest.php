@@ -3,14 +3,11 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\URL;
 use Tests\TestCase;
 
 class EmailVerificationControllerTest extends TestCase
 {
-    use RefreshDatabase;
-
     public function testRedirectionToSuccessEmailVerification(): void
     {
         $user = User::factory()->create([
